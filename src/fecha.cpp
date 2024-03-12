@@ -47,7 +47,12 @@ bool bisiesto(nat anio){
 }
 
 nat diasMes(nat mes, nat anio){
-    nat diasEnMes[] = {31,28 + bisiesto(anio),31,30,31,30,31,31,30,31,30,31};
+    nat diasEnMes[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+
+    if (mes == 2 && bisiesto(anio)){
+        return 29;
+    }
+
     return diasEnMes[mes-1];
 }
 
