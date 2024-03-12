@@ -91,7 +91,7 @@ int compararTFechas(TFecha fecha1, TFecha fecha2) {
         } else
             if (fecha1->dia > fecha2->dia){
                 res = 1;
-            } else if (fecha1->dia > fecha2->dia){
+            } else if (fecha1->dia < fecha2->dia){
                 res = -1;
             } else
                 res = 0;
