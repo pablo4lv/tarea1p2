@@ -85,7 +85,7 @@ int compararTFechas(TFecha fecha1, TFecha fecha2) {
         res = -1;
     } else 
         if (fecha1->mes > fecha2->mes){
-            res = -1;
+            res = 1;
         } else if (fecha1->mes < fecha2->mes){
             res = -1;
         } else
