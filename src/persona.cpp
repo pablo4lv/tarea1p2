@@ -55,8 +55,7 @@ void liberarTPersona(TPersona &persona){
     /************ Parte 4.3 ************/
     /*Escriba el código a continuación */
 
-    delete persona->fecha;
-    persona->fecha = NULL;
+    liberarTFecha(persona->fecha);
     delete persona;
     persona = NULL;
 
