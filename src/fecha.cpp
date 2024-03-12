@@ -42,9 +42,13 @@ void imprimirTFecha(TFecha fecha) {
 /************ Parte 3.9 ************/
 /*Escriba el código a continuación */
 
-nat diasMes(nat mes, nat anio){
+bool bisiesto(nat anio){
+    return (anio % 4 == 0 && (anio % 100 != 0 || anio % 400 == 0));
+}
 
-    return 1;
+nat diasMes(nat mes, nat anio){
+    nat diasEnMes[] = {31,28 + bisiesto(anio),31,30,31,30,31,31,30,31,30,31};
+    return diasEnMes[mes-1];
 }
 
 /*Recuerde que las funciones auxiliares
