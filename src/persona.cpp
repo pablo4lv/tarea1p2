@@ -5,6 +5,11 @@ struct rep_persona {
     /************ Parte 4.1 ************/
     /*Escriba el código a continuación */
 
+    int cedula;
+    char nombre[MAX_NOMBRE];
+    char apellido[MAX_APELLIDO];
+    TFecha fecha;
+
     /****** Fin de parte Parte 4.1 *****/
 };
 
@@ -14,6 +19,12 @@ TPersona crearTPersona(int cedula, const char nombre[MAX_NOMBRE], char apellido[
     /************ Parte 4.2 ************/
     /*Escriba el código a continuación */
 
+    nuevaPersona = new rep_persona;
+    nuevaPersona->cedula = cedula;
+    strcpy(nuevaPersona->nombre, nombre);
+    strcpy(nuevaPersona->apellido, apellido);
+    nuevaPersona->fecha = fecha;
+
     /****** Fin de parte Parte 4.2 *****/
     return nuevaPersona;
 }
@@ -22,6 +33,8 @@ TPersona crearTPersona(int cedula, const char nombre[MAX_NOMBRE], char apellido[
 void nombrePersona(TPersona persona, char nombre[MAX_NOMBRE]){
     /************ Parte 4.3 ************/
     /*Escriba el código a continuación */
+
+    
 
     /****** Fin de parte Parte 4.3 *****/
 }
