@@ -34,7 +34,7 @@ void nombrePersona(TPersona persona, char nombre[MAX_NOMBRE]){
     /************ Parte 4.3 ************/
     /*Escriba el código a continuación */
 
-    
+    strcpy(nombre, persona->nombre);
 
     /****** Fin de parte Parte 4.3 *****/
 }
@@ -43,6 +43,8 @@ void nombrePersona(TPersona persona, char nombre[MAX_NOMBRE]){
 void apellidoPersona(TPersona persona, char apellido[MAX_APELLIDO]){
     /************ Parte 4.3 ************/
     /*Escriba el código a continuación */
+
+    strcpy(apellido, persona->apellido);
 
     /****** Fin de parte Parte 4.3 *****/
 }
@@ -53,6 +55,11 @@ void liberarTPersona(TPersona &persona){
     /************ Parte 4.3 ************/
     /*Escriba el código a continuación */
 
+    delete persona->fecha;
+    persona->fecha = NULL;
+    delete persona;
+    persona = NULL;
+
     /****** Fin de parte Parte 4.3 *****/
 }
 
@@ -61,6 +68,8 @@ int cedulaTPersona(TPersona persona){
     int cedula = 0;
 	/************ Parte 4.4 ************/
     /*Escriba el código a continuación */
+
+    cedula = persona->cedula;
 
     /****** Fin de parte Parte 4.4 *****/
 	return cedula;
@@ -71,6 +80,8 @@ TFecha fechaNacimientoTPersona(TPersona persona){
     TFecha fecha = NULL;
 	/************ Parte 4.4 ************/
     /*Escriba el código a continuación */
+
+    fecha = persona->fecha;
 
     /****** Fin de parte Parte 4.4 *****/
 	return fecha;
