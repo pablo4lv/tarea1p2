@@ -59,7 +59,7 @@ void imprimirTGrupo(TGrupo grupo){
     /*Escriba el código a continuación */
 
     if (grupo->tope > 0){
-        for(int i = 0; i<grupo->tope-1;i++)
+        for(int i = 0; i<=grupo->tope-1;i++)
             imprimirTPersona(grupo->grupo[i]);
     }
 
@@ -73,7 +73,7 @@ void liberarTGrupo(TGrupo& grupo){
    /************ Parte 5.2 ************/
     /*Escriba el código a continuación */
 
-    for(int i = 0; i<grupo->tope-1;i++)
+    for(int i = 0; i<=grupo->tope-1;i++)
         liberarTPersona(grupo->grupo[i]);
     delete grupo;
     grupo = NULL;
