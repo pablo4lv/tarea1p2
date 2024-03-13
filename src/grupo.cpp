@@ -37,7 +37,7 @@ void agregarAGrupo(TGrupo& grupo, TPersona persona){
             grupo->tope++;
         }else{
             int i = grupo->tope - 1;
-            TFecha aux = fechaNacimientoTPersona(persona);
+            // TFecha aux = fechaNacimientoTPersona(persona);
             while (i >= 0 && esMasJoven(persona,grupo->grupo[i])){
                 grupo->grupo[i+1] = grupo->grupo[i];
                 i--;
