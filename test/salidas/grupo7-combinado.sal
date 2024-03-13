@@ -97,9 +97,27 @@ Fecha de nacimiento: 1/1/2005
 97>Se ha agregado la persona al grupo de forma exitosa.
 98>99>Persona creada de forma exitosa.
 100>Se ha agregado la persona al grupo de forma exitosa.
-101>No se encontraron personas en la fecha determinada.
-102>No se encontraron personas en la fecha determinada.
-103>No se encontraron personas en la fecha determinada.
+101>Se encontraron personas en la fecha determinada.
+102>Se encontraron personas en la fecha determinada.
+103>Se encontraron personas en la fecha determinada.
 104>No se encontraron personas en la fecha determinada.
-105>106>107>108>109>Se ha borrado el grupo en forma exitosa.
+105>Persona Persona2 Apellido2
+Cedula: 2222222
+Fecha de nacimiento: 1/1/2001
+Persona Persona1 Apellido1
+Cedula: 1111111
+Fecha de nacimiento: 1/1/2001
+106>Persona Persona4 Apellido4
+Cedula: 4444444
+Fecha de nacimiento: 1/1/2002
+Persona Persona3 Apellido3
+Cedula: 3333333
+Fecha de nacimiento: 1/1/2002
+107>Persona Persona6 Apellido6
+Cedula: 6666666
+Fecha de nacimiento: 1/1/2003
+Persona Persona5 Apellido5
+Cedula: 5555555
+Fecha de nacimiento: 1/1/2003
+108>109>Se ha borrado el grupo en forma exitosa.
 110>Fin.
