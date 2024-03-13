@@ -131,7 +131,7 @@ bool hayPersonasFecha(TGrupo grupo, TFecha fecha){
     int j = grupo->tope - 1;
 
     if (grupo->tope == 1){
-        hay = compararTFechas(fechaNacimientoTPersona(grupo->grupo[0]), fecha) == 0;
+        hay = (compararTFechas(fechaNacimientoTPersona(grupo->grupo[0]), fecha) == 0);
     }
 
     while (i <= j){
