@@ -131,16 +131,15 @@ bool hayPersonasFecha(TGrupo grupo, TFecha fecha){
     int j = grupo->tope - 1;
 
     if (grupo->tope == 1){
-        printf("1");
         hay = (compararTFechas(fechaNacimientoTPersona(grupo->grupo[0]), fecha) == 0);
     }
 
     while (i <= j){
         int medio = (i + j) / 2;
-        if (fechaNacimientoTPersona(grupo->grupo[medio]) == fecha){
+        if (compararTFechas(fechaNacimientoTPersona(grupo->grupo[medio]), fecha) == 0){
             hay = true;
             break;
-        }else if (fechaNacimientoTPersona(grupo->grupo[medio]) < fecha){
+        }else if (compararTFechas(fechaNacimientoTPersona(grupo->grupo[medio]), fecha) < 0){
             i = medio + 1;
         }else{
             j = medio - 1;
@@ -158,7 +157,7 @@ void imprimirPersonasFecha(TGrupo grupo, TFecha fecha){
 
     if (hayPersonasFecha(grupo,fecha)){
         for(int i = 0;i<grupo->tope;i++)
-            if (fecha == fechaNacimientoTPersona(grupo->grupo[i]))
+            if (compararTFechas(fechaNacimientoTPersona(grupo->grupo[i]), fecha) == 0)
                 imprimirTPersona(grupo->grupo[i]);
     }
 
