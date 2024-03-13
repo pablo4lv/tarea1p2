@@ -42,7 +42,7 @@ void agregarAGrupo(TGrupo& grupo, TPersona persona){
                 grupo->grupo[i] = grupo->grupo[i-1];
                 i--;
             }
-            grupo->grupo[i+1] = persona;
+            grupo->grupo[i] = persona;
             grupo->tope++;
         }
     }
