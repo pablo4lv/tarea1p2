@@ -108,7 +108,7 @@ bool esMasJoven(TPersona persona1, TPersona persona2){
 	/************ Parte 4.6 ************/
     /*Escriba el código a continuación */
 
-    if (compararTFechas(persona1->fecha,persona2->fecha) == 1){
+    if (compararTFechas(persona2->fecha,persona1->fecha) == 1){
         masJoven = true;
     }
 
