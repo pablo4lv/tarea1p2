@@ -94,7 +94,7 @@ void imprimirTPersona(TPersona persona){
     /************ Parte 4.5 ************/
     /*Escriba el código a continuación */
 
-    printf("Persona %c %c\n", persona->nombre, persona->apellido);
+    printf("Persona %s %s\n", persona->nombre, persona->apellido);
     printf("Cedula: %d\n", persona->cedula);
     printf("Fecha de Nacimiento: ");
     imprimirTFecha(persona->fecha);
