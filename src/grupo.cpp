@@ -152,7 +152,7 @@ void imprimirPersonasFecha(TGrupo grupo, TFecha fecha){
 
     if (hayPersonasFecha(grupo,fecha)){
         for(int i = 0;i<grupo->tope;i++)
-            if (fecha == fechaNacimientoTPersona(grupo->grupo[i])){
+            if (fecha == fechaNacimientoTPersona(grupo->grupo[i]))
                 imprimirTPersona(grupo->grupo[i]);
     }
 
