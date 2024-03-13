@@ -58,6 +58,11 @@ void imprimirTGrupo(TGrupo grupo){
     /************ Parte 5.2 ************/
     /*Escriba el código a continuación */
 
+    if (grupo->tope > 0){
+        for(int i = 0; i<grupo->tope-1;i++)
+            imprimirTPersona(grupo->grupo[i]);
+    }
+
     /****** Fin de parte Parte 5.2 *****/
 }
 
