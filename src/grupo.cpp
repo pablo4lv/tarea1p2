@@ -103,6 +103,20 @@ void removerDeGrupo(TGrupo &grupo, int cedula){
     /************ Parte 5.4 ************/
     /*Escriba el código a continuación */
 
+    if (estaEnGrupo(grupo, cedula)){
+        int i = 0;
+        while (i<grupo->tope){
+            if(cedula == cedulaTPersona(grupo->grupo[i])){
+                for(int j = i;j<grupo->tope-1;j++){
+                    grupo->grupo[j] = grupo->grupo[j+1];
+                }
+                liberarTPersona(grupo->grupo[grupo->tope-1]);
+                grupo->tope--;
+            }
+            i++;
+        }
+    }
+
     /****** Fin de parte Parte 5.4 *****/   
 }
 
@@ -112,6 +126,8 @@ bool hayPersonasFecha(TGrupo grupo, TFecha fecha){
     bool hay = false;
     /************ Parte 5.5 ************/
     /*Escriba el código a continuación */
+    
+
 
     /****** Fin de parte Parte 5.5 *****/ 
     return hay;
