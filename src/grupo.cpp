@@ -105,15 +105,18 @@ void removerDeGrupo(TGrupo &grupo, int cedula){
 
     if (estaEnGrupo(grupo, cedula)){
         int i = 0;
-        while (i<grupo->tope){
-            if(cedula == cedulaTPersona(grupo->grupo[i])){
-                for(int j = i;j<grupo->tope;j++){
-                    grupo->grupo[j] = grupo->grupo[j+1];
+        while (i < grupo->tope){
+            if (cedula == cedulaTPersona(grupo->grupo[i])){
+                liberarTPersona(grupo->grupo[i]); // Liberar la persona encontrada
+                // Eliminar la persona moviendo las siguientes hacia atrás
+                for (int j = i; j < grupo->tope - 1; j++){
+                    grupo->grupo[j] = grupo->grupo[j + 1];
                 }
-                liberarTPersona(grupo->grupo[grupo->tope-1]);
-                grupo->tope--;
+                grupo->tope--; // Decrementar el contador de personas en el grupo
             }
-            i++;
+            else{
+                i++;
+            }
         }
     }
 
