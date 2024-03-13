@@ -107,7 +107,7 @@ void removerDeGrupo(TGrupo &grupo, int cedula){
         int i = 0;
         while (i<grupo->tope){
             if(cedula == cedulaTPersona(grupo->grupo[i])){
-                for(int j = i;j<grupo->tope-1;j++){
+                for(int j = i;j<grupo->tope;j++){
                     grupo->grupo[j] = grupo->grupo[j+1];
                 }
                 liberarTPersona(grupo->grupo[grupo->tope-1]);
