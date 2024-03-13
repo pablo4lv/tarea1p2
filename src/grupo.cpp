@@ -34,11 +34,11 @@ void agregarAGrupo(TGrupo& grupo, TPersona persona){
     if (grupo->tope < MAX_PERSONAS){
         if (grupo->tope == 0){
             grupo->grupo[0] = persona;
-            grupo->tope = 1;
+            grupo->tope++;
         }else{
             int i = grupo->tope - 1;
-            TFecha aux = fechaNacimientoTPersona(persona);
-            while (i >= 0 && fechaNacimientoTPersona(grupo->grupo[i]) >= aux){
+            // TFecha aux = fechaNacimientoTPersona(persona);
+            while (i >= 0 && esMasJoven(persona, grupo->grupo[i])){
                 grupo->grupo[i+1] = grupo->grupo[i];
                 i--;
             }
