@@ -134,7 +134,7 @@ bool hayPersonasFecha(TGrupo grupo, TFecha fecha){
         int medio = (i + j) / 2;
         if (fechaNacimientoTPersona(grupo->grupo[medio]) == fecha){
             hay = true;
-            i++;
+            break;
         }else if (fechaNacimientoTPersona(grupo->grupo[medio]) < fecha){
             i = medio + 1;
         }else{
