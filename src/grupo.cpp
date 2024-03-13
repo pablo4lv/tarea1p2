@@ -5,7 +5,7 @@ struct rep_grupo {
     /*Escriba el código a continuación */
 
     TPersona grupo[MAX_PERSONAS];
-    int tope = 0;
+    int tope;
 
     /****** Fin de parte Parte 5.1 *****/
 };
@@ -17,6 +17,7 @@ TGrupo crearTGrupo(){
     /*Escriba el código a continuación */
 
     grupo = new rep_grupo;
+    grupo->tope = 0;
 
     /****** Fin de parte Parte 5.2 *****/
     return grupo;
@@ -30,6 +31,22 @@ void agregarAGrupo(TGrupo& grupo, TPersona persona){
     /************ Parte 5.2 ************/
     /*Escriba el código a continuación */
 
+    if (grupo->tope < MAX_PERSONAS){
+        if (grupo->tope == 0){
+            grupo->grupo[0] = persona;
+            grupo->tope++;
+        }else{
+            int i = grupo->tope - 1;
+            TFecha aux = fechaNacimientoTPersona(persona);
+            while (i >= 0 && fechaNacimientoTPersona(grupo->grupo[i]) >= aux){
+                grupo->grupo[i+1] = grupo->grupo[i];
+                i--;
+            }
+            grupo->grupo[i+1] = persona;
+            grupo->tope++;
+        }
+    }
+    
     /****** Fin de parte Parte 5.2 *****/
 }
 
