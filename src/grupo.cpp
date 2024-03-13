@@ -88,6 +88,12 @@ bool estaEnGrupo(TGrupo grupo, int cedula){
 	/************ Parte 5.3 ************/
     /*Escriba el código a continuación */
 
+    int i = grupo->tope - 1;
+    while(i>=0 && !esta){
+        esta = (cedula == cedulaTPersona(grupo->grupo[i]));
+        i--;
+    }
+
     /****** Fin de parte Parte 5.3 *****/
 	return esta;
 }
