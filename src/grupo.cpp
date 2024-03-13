@@ -134,6 +134,7 @@ bool hayPersonasFecha(TGrupo grupo, TFecha fecha){
     while (i <= j){
         if (fechaNacimientoTPersona(grupo->grupo[medio]) == fecha){
             hay = true;
+            i++;
         }else if (fechaNacimientoTPersona(grupo->grupo[medio]) < fecha){
             i = medio + 1;
         }else{
