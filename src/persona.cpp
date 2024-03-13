@@ -98,6 +98,7 @@ void imprimirTPersona(TPersona persona){
     printf("Cedula: %d\n", persona->cedula);
     printf("Fecha de nacimiento: ");
     imprimirTFecha(persona->fecha);
+    
     /****** Fin de parte Parte 4.5 *****/
 }
 

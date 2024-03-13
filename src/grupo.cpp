@@ -4,6 +4,9 @@ struct rep_grupo {
     /************ Parte 5.1 ************/
     /*Escriba el código a continuación */
 
+    TPersona grupo[MAX_PERSONAS];
+    int tope = 0;
+
     /****** Fin de parte Parte 5.1 *****/
 };
 
@@ -12,6 +15,8 @@ TGrupo crearTGrupo(){
     TGrupo grupo = NULL;
     /************ Parte 5.2 ************/
     /*Escriba el código a continuación */
+
+    grupo = new rep_grupo;
 
     /****** Fin de parte Parte 5.2 *****/
     return grupo;
