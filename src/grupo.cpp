@@ -73,6 +73,11 @@ void liberarTGrupo(TGrupo& grupo){
    /************ Parte 5.2 ************/
     /*Escriba el código a continuación */
 
+    for(int i = 0; i<grupo->tope-1;i++)
+        liberarTPersona(grupo->grupo[i]);
+    delete grupo;
+    grupo = NULL;
+
     /****** Fin de parte Parte 5.2 *****/
 }
 
