@@ -107,16 +107,13 @@ void removerDeGrupo(TGrupo &grupo, int cedula){
         int i = 0;
         while (i < grupo->tope){
             if (cedula == cedulaTPersona(grupo->grupo[i])){
-                liberarTPersona(grupo->grupo[i]); // Liberar la persona encontrada
-                // Eliminar la persona moviendo las siguientes hacia atrás
+                liberarTPersona(grupo->grupo[i]);
                 for (int j = i; j < grupo->tope - 1; j++){
                     grupo->grupo[j] = grupo->grupo[j + 1];
                 }
-                grupo->tope--; // Decrementar el contador de personas en el grupo
+                grupo->tope--;
             }
-            else{
-                i++;
-            }
+            i++;
         }
     }
 
@@ -129,8 +126,20 @@ bool hayPersonasFecha(TGrupo grupo, TFecha fecha){
     bool hay = false;
     /************ Parte 5.5 ************/
     /*Escriba el código a continuación */
-    
 
+    int i = 0;
+    int j = grupo->tope - 1;
+    int medio = (i + j) / 2;
+
+    while (i <= j){
+        if (fechaNacimientoTPersona(grupo->grupo[medio]) == fecha){
+            hay = true;
+        }else if (fechaNacimientoTPersona(grupo->grupo[medio]) < fecha){
+            i = medio + 1;
+        }else{
+            j = medio - 1;
+        }
+    }
 
     /****** Fin de parte Parte 5.5 *****/ 
     return hay;
@@ -140,6 +149,12 @@ bool hayPersonasFecha(TGrupo grupo, TFecha fecha){
 void imprimirPersonasFecha(TGrupo grupo, TFecha fecha){
     /************ Parte 5.5 ************/
     /*Escriba el código a continuación */
+
+    if (hayPersonasFecha(grupo,fecha)){
+        for(int i = 0;i<grupo->tope;i++)
+            if (fecha == fechaNacimientoTPersona(grupo->grupo[i])){
+                imprimirTPersona(grupo->grupo[i]);
+    }
 
     /****** Fin de parte Parte 5.5 *****/ 
 }
