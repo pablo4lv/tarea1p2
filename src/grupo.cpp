@@ -38,7 +38,7 @@ void agregarAGrupo(TGrupo& grupo, TPersona persona){
         }else{
             int i = grupo->tope - 1;
             TFecha aux = fechaNacimientoTPersona(persona);
-            while (i >= 0 && (fechaNacimientoTPersona(grupo->grupo[i]) > aux)){
+            while (i >= 0 && (compararTFechas(fechaNacimientoTPersona(grupo->grupo[i]), aux) >= 0)){
                 grupo->grupo[i+1] = grupo->grupo[i];
                 i--;
             }
