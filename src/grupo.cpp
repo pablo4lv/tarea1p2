@@ -128,7 +128,7 @@ bool hayPersonasFecha(TGrupo grupo, TFecha fecha){
     /*Escriba el código a continuación */
 
     int i = 0;
-    int j = grupo->tope;
+    int j = grupo->tope - 1;
 
     while (i <= j){
         int medio = (i + j) / 2;
